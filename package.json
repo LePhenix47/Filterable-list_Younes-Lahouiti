@@ -1,0 +1,13 @@
+{
+  "name": "13.-liste-filtrable",
+  "version": "1.0.0",
+  "description": "This file contains the script to compile the .scss file",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass -w ./style.scss:./style.css -c -s compressed"
+  },
+  "keywords": [],
+  "author": "Younes Lahouiti",
+  "license": "ISC"
+}

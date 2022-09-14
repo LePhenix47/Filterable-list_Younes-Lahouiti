@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Meta tags-->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="This repository contains the code for the filterable list">
+  <meta color="color-scheme" content="dark light" />
+
+  <!-- Title -->
+  <title>Filterable list</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./style.css" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Icons -->
+  <script src="https://kit.fontawesome.com/904e9ee361.js" crossorigin="anonymous"></script>
+
+  <!-- Page logo -->
+  <link rel="icon" href="./images/logo.svg" type="image/gif">
+
+  <!-- JS -->
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 class="header__title"><img src="./images/logo.svg" alt="Image of" class="header__logo"> Users</h1>
+      <nav class="header__navigation-bar">
+        <ul class="header__unordered-list">
+          <li class="header__list-item">
+            <img src="./images/dashboard.svg" alt="Image of" class="header__image"> Dashboard
+          </li>
+          <li class="header__list-item">
+            <img src="./images/speech-bubble.svg" alt="Image of" class="header__image"> Messenger
+          </li>
+          <li class="header__list-item header__list-item-active">
+            <img src="./images/server.svg" alt="Image of" class="header__image"> Database
+          </li>
+          <li class="header__list-item">
+            <img src="./images/calendar.svg" alt="Image of" class="header__image"> Calendar
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <form action="" method="post" class="main__form">
+        <section class="main__section">
+          <h2 class="main__section-heading">Search in the database:</h2>
+          <div class="main__label-wrapper">
+            <label for="search" class="main__label">
+              <i class="fa-solid fa-magnifying-glass main__label-icon"></i>
+            </label>
+            <input type="text" class="main__input" id="search" placeholder="Search for a user" autocomplete="off">
+          </div>
+          <!-- scrapped idea
+          <select name="type-of-seach" id="type-of-seach" class="main__select">
+            <option value="" class="main__option">Please select an option</option>
+            <option value="Name" class="main__option">Name</option>
+            <option value="Email" class="main__option">Email</option>
+            <option value="Phone" class="main__option">Phone</option>
+          </select> -->
+        </section>
+      </form>
+      <div class="main__results">
+        <div class="main__table-preview">
+          <img src="./images/search.svg" alt="Image of an icon" class="main__table-preview-image">
+          <h2 class="main__table-preview-heading">
+            Search a user by their name, email or phone number
+          </h2>
+        </div>
+
+
+        <div class="main__table-container">
+
+          <table class="table">
+            <caption class="table__caption">Database results for: </caption>
+            <thead class="table__header">
+              <tr class="table__row">
+                <td class="table__data">Name</td>
+                <td class="table__data">Email</td>
+                <td class="table__data">Phone</td>
+              </tr>
+            </thead>
+            <tfoot class="table__footer">
+              <tr class="table__row">
+                <td class="table__data">Name</td>
+                <td class="table__data">Email</td>
+                <td class="table__data">Phone</td>
+              </tr>
+            </tfoot>
+            <tbody class="table__body">
+
+              <template>
+
+                <tr class="table__row">
+                  <td class="table__data table__data-name">
+                    <img src="${imageUrl}" alt="${alternativeText}" class="table__data-image">
+                    ${name}
+                  </td>
+                  <td class="table__data table__data-email">${email}</td>
+                  <td class="table__data table__data-phone">${phone}</td>
+                </tr>
+
+              </template>
+
+              <!--  -->
+              <tr class="table__row">
+                <td class="table__data table__data-name">
+                  <img src="${imageUrl}" alt="${alternativeText}" class="table__data-image">
+                  ${name}
+                </td>
+                <td class="table__data table__data-email">${email}</td>
+                <td class="table__data table__data-phone">${phone}</td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__data table__data-name">
+                  <img src="${imageUrl}" alt="${alternativeText}" class="table__data-image">
+                  ${name}
+                </td>
+                <td class="table__data table__data-email">${email}</td>
+                <td class="table__data table__data-phone">${phone}</td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__data table__data-name">
+                  <img src="${imageUrl}" alt="${alternativeText}" class="table__data-image">
+                  ${name}
+                </td>
+                <td class="table__data table__data-email">${email}</td>
+                <td class="table__data table__data-phone">${phone}</td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__data table__data-name">
+                  <img src="${imageUrl}" alt="${alternativeText}" class="table__data-image">
+                  ${name}
+                </td>
+                <td class="table__data table__data-email">${email}</td>
+                <td class="table__data table__data-phone">${phone}</td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__data table__data-name">
+                  <img src="${imageUrl}" alt="${alternativeText}" class="table__data-image">
+                  ${name}
+                </td>
+                <td class="table__data table__data-email">${email}</td>
+                <td class="table__data table__data-phone">${phone}</td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__data table__data-name">
+                  <img src="${imageUrl}" alt="${alternativeText}" class="table__data-image">
+                  ${name}
+                </td>
+                <td class="table__data table__data-email">${email}</td>
+                <td class="table__data table__data-phone">${phone}</td>
+              </tr>
+
+
+              <!--  -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+
+  </div>
+</body>
+
+</html>
