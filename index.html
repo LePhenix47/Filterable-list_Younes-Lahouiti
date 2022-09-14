@@ -27,7 +27,7 @@
   <script src="https://kit.fontawesome.com/904e9ee361.js" crossorigin="anonymous"></script>
 
   <!-- Page logo -->
-  <link rel="icon" href="./images/logo.svg" type="image/gif">
+  <link rel="icon" href="./filterable-list-icon.png" type="image/gif">
 
   <!-- JS -->
   <script defer src="script.js"></script>
@@ -75,8 +75,9 @@
         </section>
       </form>
       <div class="main__results">
-        <div class="main__table-preview">
-          <img src="./images/search.svg" alt="Image of an icon" class="main__table-preview-image">
+        <div class="main__table-preview" title="Enter the name of a user in the search bar">
+          <p class="main__table-preview-icon">🔎</p>
+          <!-- <p class="main__table-preview-icon">🤔</p> -->
           <h2 class="main__table-preview-heading">
             Search a user by their name, email or phone number
           </h2>
@@ -86,7 +87,7 @@
         <div class="main__table-container">
 
           <table class="table">
-            <caption class="table__caption">Database results for: </caption>
+            <caption class="table__caption">Database results for: <span></span></caption>
             <thead class="table__header">
               <tr class="table__row">
                 <td class="table__data">Name</td>
@@ -107,7 +108,8 @@
 
                 <tr class="table__row">
                   <td class="table__data table__data-name">
-                    <img src="${imageUrl}" alt="${alternativeText}" class="table__data-image">
+                    <img src="./images/avatar-c3b5edb46a476302aef8eeded4f6f8d2.jpg" alt="${lternativeText}"
+                      class="table__data-image">
                     ${name}
                   </td>
                   <td class="table__data table__data-email">${email}</td>
@@ -117,53 +119,168 @@
               </template>
 
               <!--  -->
+
+
               <tr class="table__row">
                 <td class="table__data table__data-name">
-                  <img src="${imageUrl}" alt="${alternativeText}" class="table__data-image">
-                  ${name}
+                  <img src="./images/avatar-c3b5edb46a476302aef8eeded4f6f8d2.jpg"
+                    alt="Picture of mister Martin Martin, living in the region  of Saint-Martin"
+                    class="table__data-image">
+                  Martin Martin
                 </td>
-                <td class="table__data table__data-email">${email}</td>
-                <td class="table__data table__data-phone">${phone}</td>
+                <td class="table__data table__data-email">martin-martin@martin.ma</td>
+                <td class="table__data table__data-phone">01-23-45-67-89</td>
               </tr>
               <tr class="table__row">
                 <td class="table__data table__data-name">
-                  <img src="${imageUrl}" alt="${alternativeText}" class="table__data-image">
-                  ${name}
+                  <img src="./images/avatar-c3b5edb46a476302aef8eeded4f6f8d2.jpg"
+                    alt="Picture of mister Martin Martin, living in the region  of Saint-Martin"
+                    class="table__data-image">
+                  Martin Martin
                 </td>
-                <td class="table__data table__data-email">${email}</td>
-                <td class="table__data table__data-phone">${phone}</td>
+                <td class="table__data table__data-email">martin-martin@martin.ma</td>
+                <td class="table__data table__data-phone">01-23-45-67-89</td>
               </tr>
               <tr class="table__row">
                 <td class="table__data table__data-name">
-                  <img src="${imageUrl}" alt="${alternativeText}" class="table__data-image">
-                  ${name}
+                  <img src="./images/avatar-c3b5edb46a476302aef8eeded4f6f8d2.jpg"
+                    alt="Picture of mister Martin Martin, living in the region  of Saint-Martin"
+                    class="table__data-image">
+                  Martin Martin
                 </td>
-                <td class="table__data table__data-email">${email}</td>
-                <td class="table__data table__data-phone">${phone}</td>
+                <td class="table__data table__data-email">martin-martin@martin.ma</td>
+                <td class="table__data table__data-phone">01-23-45-67-89</td>
               </tr>
               <tr class="table__row">
                 <td class="table__data table__data-name">
-                  <img src="${imageUrl}" alt="${alternativeText}" class="table__data-image">
-                  ${name}
+                  <img src="./images/avatar-c3b5edb46a476302aef8eeded4f6f8d2.jpg"
+                    alt="Picture of mister Martin Martin, living in the region  of Saint-Martin"
+                    class="table__data-image">
+                  Martin Martin
                 </td>
-                <td class="table__data table__data-email">${email}</td>
-                <td class="table__data table__data-phone">${phone}</td>
+                <td class="table__data table__data-email">martin-martin@martin.ma</td>
+                <td class="table__data table__data-phone">01-23-45-67-89</td>
               </tr>
               <tr class="table__row">
                 <td class="table__data table__data-name">
-                  <img src="${imageUrl}" alt="${alternativeText}" class="table__data-image">
-                  ${name}
+                  <img src="./images/avatar-c3b5edb46a476302aef8eeded4f6f8d2.jpg"
+                    alt="Picture of mister Martin Martin, living in the region  of Saint-Martin"
+                    class="table__data-image">
+                  Martin Martin
                 </td>
-                <td class="table__data table__data-email">${email}</td>
-                <td class="table__data table__data-phone">${phone}</td>
+                <td class="table__data table__data-email">martin-martin@martin.ma</td>
+                <td class="table__data table__data-phone">01-23-45-67-89</td>
               </tr>
               <tr class="table__row">
                 <td class="table__data table__data-name">
-                  <img src="${imageUrl}" alt="${alternativeText}" class="table__data-image">
-                  ${name}
+                  <img src="./images/avatar-c3b5edb46a476302aef8eeded4f6f8d2.jpg"
+                    alt="Picture of mister Martin Martin, living in the region  of Saint-Martin"
+                    class="table__data-image">
+                  Martin Martin
                 </td>
-                <td class="table__data table__data-email">${email}</td>
-                <td class="table__data table__data-phone">${phone}</td>
+                <td class="table__data table__data-email">martin-martin@martin.ma</td>
+                <td class="table__data table__data-phone">01-23-45-67-89</td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__data table__data-name">
+                  <img src="./images/avatar-c3b5edb46a476302aef8eeded4f6f8d2.jpg"
+                    alt="Picture of mister Martin Martin, living in the region  of Saint-Martin"
+                    class="table__data-image">
+                  Martin Martin
+                </td>
+                <td class="table__data table__data-email">martin-martin@martin.ma</td>
+                <td class="table__data table__data-phone">01-23-45-67-89</td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__data table__data-name">
+                  <img src="./images/avatar-c3b5edb46a476302aef8eeded4f6f8d2.jpg"
+                    alt="Picture of mister Martin Martin, living in the region  of Saint-Martin"
+                    class="table__data-image">
+                  Martin Martin
+                </td>
+                <td class="table__data table__data-email">martin-martin@martin.ma</td>
+                <td class="table__data table__data-phone">01-23-45-67-89</td>
+              </tr>
+
+              <tr class="table__row">
+                <td class="table__data table__data-name">
+                  <img src="./images/avatar-c3b5edb46a476302aef8eeded4f6f8d2.jpg"
+                    alt="Picture of mister Martin Martin, living in the region  of Saint-Martin"
+                    class="table__data-image">
+                  Martin Martin
+                </td>
+                <td class="table__data table__data-email">martin-martin@martin.ma</td>
+                <td class="table__data table__data-phone">01-23-45-67-89</td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__data table__data-name">
+                  <img src="./images/avatar-c3b5edb46a476302aef8eeded4f6f8d2.jpg"
+                    alt="Picture of mister Martin Martin, living in the region  of Saint-Martin"
+                    class="table__data-image">
+                  Martin Martin
+                </td>
+                <td class="table__data table__data-email">martin-martin@martin.ma</td>
+                <td class="table__data table__data-phone">01-23-45-67-89</td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__data table__data-name">
+                  <img src="./images/avatar-c3b5edb46a476302aef8eeded4f6f8d2.jpg"
+                    alt="Picture of mister Martin Martin, living in the region  of Saint-Martin"
+                    class="table__data-image">
+                  Martin Martin
+                </td>
+                <td class="table__data table__data-email">martin-martin@martin.ma</td>
+                <td class="table__data table__data-phone">01-23-45-67-89</td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__data table__data-name">
+                  <img src="./images/avatar-c3b5edb46a476302aef8eeded4f6f8d2.jpg"
+                    alt="Picture of mister Martin Martin, living in the region  of Saint-Martin"
+                    class="table__data-image">
+                  Martin Martin
+                </td>
+                <td class="table__data table__data-email">martin-martin@martin.ma</td>
+                <td class="table__data table__data-phone">01-23-45-67-89</td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__data table__data-name">
+                  <img src="./images/avatar-c3b5edb46a476302aef8eeded4f6f8d2.jpg"
+                    alt="Picture of mister Martin Martin, living in the region  of Saint-Martin"
+                    class="table__data-image">
+                  Martin Martin
+                </td>
+                <td class="table__data table__data-email">martin-martin@martin.ma</td>
+                <td class="table__data table__data-phone">01-23-45-67-89</td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__data table__data-name">
+                  <img src="./images/avatar-c3b5edb46a476302aef8eeded4f6f8d2.jpg"
+                    alt="Picture of mister Martin Martin, living in the region  of Saint-Martin"
+                    class="table__data-image">
+                  Martin Martin
+                </td>
+                <td class="table__data table__data-email">martin-martin@martin.ma</td>
+                <td class="table__data table__data-phone">01-23-45-67-89</td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__data table__data-name">
+                  <img src="./images/avatar-c3b5edb46a476302aef8eeded4f6f8d2.jpg"
+                    alt="Picture of mister Martin Martin, living in the region  of Saint-Martin"
+                    class="table__data-image">
+                  Martin Martin
+                </td>
+                <td class="table__data table__data-email">martin-martin@martin.ma</td>
+                <td class="table__data table__data-phone">01-23-45-67-89</td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__data table__data-name">
+                  <img src="./images/avatar-c3b5edb46a476302aef8eeded4f6f8d2.jpg"
+                    alt="Picture of mister Martin Martin, living in the region  of Saint-Martin"
+                    class="table__data-image">
+                  Martin Martin
+                </td>
+                <td class="table__data table__data-email">martin-martin@martin.ma</td>
+                <td class="table__data table__data-phone">01-23-45-67-89</td>
               </tr>
 
 
