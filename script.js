@@ -13,7 +13,7 @@ async function callRandomUsersAPI() {
     console.log(randomUsers);
     fillTableWithData(randomUsers);
   } catch (APIError) {
-    console.error({ APIError });
+    console.error("API error: ", APIError);
   }
 }
 
@@ -22,15 +22,16 @@ callRandomUsersAPI();
 const urlRandomPhotosAPI = "https://jsonplaceholder.typicode.com/photos/";
 
 let photosUrls = [];
+photosUrls.length = 10;
 
 async function callPhotosAPI() {
   try {
     let response = await fetch(urlRandomPhotosAPI);
     let photos = await response.json();
     console.log(photos);
-    photosUrls = photos;
+    photosUrls = Array.from(photos);
   } catch (APIError) {
-    console.error({ APIError });
+    console.error("API error: ", APIError);
   }
 }
 
@@ -44,9 +45,10 @@ function fillTableWithData(dataObjectsArray) {
   for (let i = 0; i < dataObjectsArray.length; i++) {
     let dataObject = dataObjectsArray[i];
     const { name, email, phone } = dataObject;
+    console.table(photosUrls[i].url);
     template = `<tr class="table__row" data-name="${name}">
                   <td class="table__data table__data-name">
-                    <img src="${photosUrls[i].url}" alt="Image for ${name}"
+                    <img src="${photosUrls?.[i]?.url}" alt="Image for ${name}"
                       class="table__data-image">
                     ${name}
                   </td>
