@@ -17,9 +17,10 @@ async function callRandomUsersAPI() {
   }
 }
 
-callRandomUsersAPI();
-
 const urlRandomPhotosAPI = "https://jsonplaceholder.typicode.com/photos/";
+callPhotosAPI();
+
+callRandomUsersAPI();
 
 let photosUrls = [];
 photosUrls.length = 10;
@@ -35,8 +36,6 @@ async function callPhotosAPI() {
   }
 }
 
-callPhotosAPI();
-
 const tableBody = document.querySelector(".table__body");
 let users = [];
 
@@ -45,7 +44,7 @@ function fillTableWithData(dataObjectsArray) {
   for (let i = 0; i < dataObjectsArray.length; i++) {
     let dataObject = dataObjectsArray[i];
     const { name, email, phone } = dataObject;
-    console.table(photosUrls[i].url);
+    console.table(photosUrls[i]?.url); //Using optional chaining to avoid errors
     template = `<tr class="table__row" data-name="${name}">
                   <td class="table__data table__data-name">
                     <img src="${photosUrls?.[i]?.url}" alt="Image for ${name}"
