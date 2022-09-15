@@ -277,10 +277,13 @@ body {
 
         &-heading {
             text-align: center;
-            width: 65%;
+            width: 95%;
             height: -webkit-min-content;
             height: -moz-min-content;
             height: min-content;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow-x: hidden;
         }
 
         &-icon {

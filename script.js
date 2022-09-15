@@ -106,7 +106,7 @@ function changeTableRows(e) {
     console.log("Removing table and adding the preview!");
     tableContainer.classList.add("hide");
     tablePreview.classList.remove("hide");
-    tablePreviewHeading.textContent = `Oops! Couldn't find user with "${valueOfInput}"`;
+    tablePreviewHeading.innerHTML = `Oops! <br/>Couldn't find user with "${valueOfInput}"`;
   } else if (!valueOfInput) {
     tableCaption.textContent = "Enter the user's name, email or phone number";
   }
